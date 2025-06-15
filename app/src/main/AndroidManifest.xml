@@ -12,6 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VaultyApp"
         tools:targetApi="31">
+        <activity android:name=".LoginPage"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".SignupPage"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
