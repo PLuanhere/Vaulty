@@ -19,6 +19,18 @@
         <activity android:name=".SignupPage"
             android:exported="true">
         </activity>
+
+        <activity android:name=".NewPassword"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".ChangePassword"
+            android:exported="true">
+        </activity>
+
+        <activity android:name=".ShowPassword"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
