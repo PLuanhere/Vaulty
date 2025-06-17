@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_radius"
+        android:orientation="vertical"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="18dp"
+
+            android:background="@drawable/radius"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <!-- Ô nhập nội dung -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:gravity="center"
+                android:text="Mới nhất"
+                android:textColor="#22646A"
+                android:textSize="28sp"
+                android:textStyle="normal" />
+
+            <!-- Icon micro -->
+            <ImageView
+                android:id="@+id/more"
+                android:rotation="90"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/more" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+
+            android:background="@drawable/radius"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <!-- Ô nhập nội dung -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:gravity="center"
+                android:text="Lâu nhất"
+                android:textColor="#22646A"
+                android:textSize="28sp"
+                android:textStyle="normal" />
+            <!-- Icon micro -->
+            <ImageView
+                android:rotation="90"
+                android:id="@+id/more1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/more" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="18dp"
+
+            android:background="@drawable/radius"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <!-- Ô nhập nội dung -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:gravity="center"
+                android:text="A - Z"
+                android:textColor="#22646A"
+                android:textSize="28sp"
+
+                android:textStyle="normal" />
+            <!-- Icon micro -->
+            <ImageView
+                android:id="@+id/more2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+
+            android:background="@drawable/radius"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <!-- Ô nhập nội dung -->
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="60dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius"
+                android:gravity="center"
+                android:text="Z - A"
+                android:textColor="#22646A"
+                android:textSize="28sp"
+                android:textStyle="normal" />
+            <!-- Icon micro -->
+            <ImageView
+                android:id="@+id/more3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:rotation="180"
+                android:src="@drawable/arrow" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
