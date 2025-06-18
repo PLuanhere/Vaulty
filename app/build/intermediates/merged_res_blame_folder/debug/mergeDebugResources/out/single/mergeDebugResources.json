@@ -1,0 +1,186 @@
+[
+    {
+        "merged": "com.example.vaultyapp-debug-42:/layout_dialog_check_email.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/layout/dialog_check_email.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_copy.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_copy.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_bg_rounded_white.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/bg_rounded_white.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_logo_vaulty.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/logo_vaulty.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_icon_pencil.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/icon_pencil.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_mail.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_mail.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_facebook.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_facebook.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_lockopen.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_lockopen.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_eyeclosed.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_eyeclosed.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/layout_change_password.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/layout/change_password.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_setting.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_setting.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_icon_eyeopen.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/icon_eyeopen.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/layout_signup_page.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/layout/signup_page.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_email_check.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_email_check.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/xml_backup_rules.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/layout_show_password.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/layout/show_password.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_search.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_search.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_back.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_back.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_bg_social_icon.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/bg_social_icon.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/layout_new_password.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/layout/new_password.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_user.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_user.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_mic.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_mic.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/layout_dialog_otp.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/layout/dialog_otp.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_delete.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_delete.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_sort.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_sort.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.vaultyapp-main-44:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_apple.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_apple.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_google.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_google.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_ic_lock.png.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/ic_lock.png"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/layout_login_page.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/layout/login_page.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/layout_activity_main.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.vaultyapp-debug-42:/drawable_bg_input.xml.flat",
+        "source": "com.example.vaultyapp-main-44:/drawable/bg_input.xml"
+    }
+]

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#22646A"
+    tools:context=".LoginActivity">
+
+    <!-- Nhóm logo và tiêu đề VAULTY -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/groupLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"
+        android:paddingStart="24dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_vaulty"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:maxWidth="300dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VAULTY"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="-8dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Tiêu đề chào -->
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="XIN CHÀO..."
+        android:textSize="28sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/groupLogo"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <!-- ScrollView cho phần nội dung cuộn -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tittle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_white"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tittleContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đăng Nhập"
+                android:textStyle="bold"
+                android:textColor="#22646A"
+                android:textSize="24sp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Email / Số điện thoại"
+                android:textColorHint="#999696"
+                android:textColor="#000000"
+                android:background="@drawable/bg_input"
+                android:padding="16dp"
+                android:paddingStart="24dp"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/ic_mail"
+                android:drawablePadding="8dp"
+                android:tint="#000000"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tittleContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- TextView báo lỗi tài khoản -->
+            <TextView
+                android:id="@+id/tvAccountError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D32F2F"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/edtPhone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Nhập mật khẩu..."
+                android:textColorHint="#999696"
+                android:textColor="#000000"
+                android:background="@drawable/bg_input"
+                android:padding="16dp"
+                android:paddingStart="24dp"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableEnd="@drawable/ic_eyeclosed"
+                android:drawablePadding="8dp"
+                android:tint="#000000"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/tvAccountError"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- TextView báo lỗi mật khẩu -->
+            <TextView
+                android:id="@+id/tvPasswordError"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D32F2F"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/edtPassword"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/tvForget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                android:text="Quên mật khẩu?"
+                android:textColor="#22646A"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/edtPassword"
+                app:layout_constraintTop_toBottomOf="@id/tvPasswordError" />
+
+            <Button
+                android:id="@+id/buttonLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đăng Nhập"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:padding="16dp"
+                android:textStyle="bold"
+                android:backgroundTint="#22646A"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/tvForget"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/lineOr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/buttonLog"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#CCCCCC"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="HOẶC"
+                    android:textSize="14sp"
+                    android:textColor="#999999"
+                    android:textStyle="bold"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="#CCCCCC"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- Các nút social login có id riêng -->
+            <LinearLayout
+                android:id="@+id/socialRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/lineOr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- Facebook -->
+                <LinearLayout
+                    android:id="@+id/btnFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_social_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:contentDescription="Facebook"
+                        android:src="@drawable/ic_facebook" />
+                </LinearLayout>
+
+                <!-- Google -->
+                <LinearLayout
+                    android:id="@+id/btnGoogle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_social_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:contentDescription="Google"
+                        android:src="@drawable/ic_google" />
+                </LinearLayout>
+
+                <!-- Apple -->
+                <LinearLayout
+                    android:id="@+id/btnApple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_social_icon"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:contentDescription="Apple"
+                        android:src="@drawable/ic_apple" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/socialRow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:id="@+id/tvAnswer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bạn chưa có tài khoản?"
+                    android:textSize="14sp"
+                    android:textColor="#6F6F6F"
+                    android:textStyle="normal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng ký"
+                    android:textSize="14sp"
+                    android:textColor="#22646A"
+                    android:textStyle="bold"
+                    android:layout_marginStart="4dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tvAnswer" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
