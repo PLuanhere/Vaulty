@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "14545105606",
+    "project_id": "vaultyapp-9dec8",
+    "storage_bucket": "vaultyapp-9dec8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:14545105606:android:400509d133df06a1b95dc7",
+        "android_client_info": {
+          "package_name": "com.example.vaultyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "14545105606-qusio89oabcksu3k68sfigahe48935st.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vaultyapp",
+            "certificate_hash": "1ef7d7c701c79eee4cbff0e866a937fdd3ee71e9"
+          }
+        },
+        {
+          "client_id": "14545105606-249mvoen4gg9t0q9svj41tpeeqfj4j1v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNATYrCWRs1KsnRuiuuCRhTz4wFw_JWe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "14545105606-249mvoen4gg9t0q9svj41tpeeqfj4j1v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
