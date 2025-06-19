@@ -79,9 +79,9 @@ public class NewPasswordActivity extends AppCompatActivity {
                             .document(user.getUid())
                             .set(newUserData)
                             .addOnSuccessListener(aVoid2 -> {
-                                Toast.makeText(this, "Đã thêm!", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(this, MainActivity.class);
-                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                                Toast.makeText(NewPasswordActivity.this, "Đã thêm!", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(NewPasswordActivity.this, MainActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
                                 startActivity(intent);
                                 finish();
                             })
