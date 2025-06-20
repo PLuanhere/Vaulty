@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     private LinearLayout linearAccounts;
-    private ImageView btnAdd, btnSort, btnClear;
+    private ImageView btnAdd, btnSort, btnClear, btnControl;
     private EditText edtSearch;
 
     private List<Map<String, Object>> allAccounts = new ArrayList<>();
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         btnSort = findViewById(R.id.btnSort);
         edtSearch = findViewById(R.id.edtSearch);
         btnClear = findViewById(R.id.btnClear);
+        btnControl = findViewById(R.id.btnControl);
 
         loadAccountData();
 
@@ -51,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         });
+
+        btnControl.setOnClickListener(v -> showLogoutPopup());
 
         edtSearch.addTextChangedListener(new TextWatcher() {
             @Override
@@ -185,6 +188,33 @@ public class MainActivity extends AppCompatActivity {
             currentSortMode = 3;
             filterAccounts(edtSearch.getText().toString());
             popupWindow.dismiss();
+        });
+    }
+
+    private void showLogoutPopup() {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View popupView = inflater.inflate(R.layout.popup_logout, null, false);
+
+        PopupWindow popupWindow = new PopupWindow(popupView,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                true);
+
+        // Lấy vị trí dưới btnControl
+        int[] location = new int[2];
+        ImageView btnControl = findViewById(R.id.btnControl);
+        btnControl.getLocationOnScreen(location);
+        popupWindow.showAtLocation(btnControl, Gravity.NO_GRAVITY, location[0], location[1] + btnControl.getHeight());
+
+        // Xử lý đăng xuất
+        TextView tvLogout = popupView.findViewById(R.id.tvLogout);
+        tvLogout.setOnClickListener(v -> {
+            FirebaseAuth.getInstance().signOut();
+            popupWindow.dismiss();
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
         });
     }
 }
