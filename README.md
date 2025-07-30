@@ -82,7 +82,7 @@ VaultyApp/
 
 ## 💡 Đóng góp & Liên hệ
 
-Bạn có ý tưởng hoặc phát hiện lỗi? Hãy mở [issue](https://github.com/PLuanhere/VaultyApp/issues) hoặc gửi pull request!
+Bạn có ý tưởng hoặc phát hiện lỗi? Hãy mở [issue]([https://github.com/PLuanhere/VaultyApp/issues](https://github.com/PLuanhere/Vaulty/issues)) hoặc gửi pull request!
 
 ---
 
