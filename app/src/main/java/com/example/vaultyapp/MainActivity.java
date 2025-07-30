@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Map<String, Object>> allAccounts = new ArrayList<>();
     private int currentSortMode = 0; // 0: Mới nhất, 1: Cũ nhất, 2: A-Z, 3: Z-A
+    private View dimOverlay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,12 +45,13 @@ public class MainActivity extends AppCompatActivity {
         edtSearch = findViewById(R.id.edtSearch);
         btnClear = findViewById(R.id.btnClear);
         btnControl = findViewById(R.id.btnControl);
+        dimOverlay = findViewById(R.id.dimOverlay);
 
         loadAccountData();
 
         btnAdd.setOnClickListener(v -> {
             Intent intent = new Intent(this, NewPasswordActivity.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         });
 
@@ -68,9 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnSort.setOnClickListener(v -> showSortPopup());
 
-        btnClear.setOnClickListener(v -> {
-            Toast.makeText(this, "Tính năng đang phát triển", Toast.LENGTH_SHORT).show();
-        });
+        btnClear.setOnClickListener(v -> showConfirmDeleteAllPopup());
     }
 
     private void loadAccountData() {
@@ -163,6 +163,10 @@ public class MainActivity extends AppCompatActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 true);
 
+        // Làm tối nền
+        dimOverlay.setVisibility(View.VISIBLE);
+        popupWindow.setOnDismissListener(() -> dimOverlay.setVisibility(View.GONE));
+
         // Lấy vị trí dưới btnSort
         int[] location = new int[2];
         btnSort.getLocationOnScreen(location);
@@ -200,9 +204,12 @@ public class MainActivity extends AppCompatActivity {
                 LinearLayout.LayoutParams.WRAP_CONTENT,
                 true);
 
+        // Làm tối nền
+        dimOverlay.setVisibility(View.VISIBLE);
+        popupWindow.setOnDismissListener(() -> dimOverlay.setVisibility(View.GONE));
+
         // Lấy vị trí dưới btnControl
         int[] location = new int[2];
-        ImageView btnControl = findViewById(R.id.btnControl);
         btnControl.getLocationOnScreen(location);
         popupWindow.showAtLocation(btnControl, Gravity.NO_GRAVITY, location[0], location[1] + btnControl.getHeight());
 
@@ -216,5 +223,50 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+    }
+
+    private void showConfirmDeleteAllPopup() {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View popupView = inflater.inflate(R.layout.popup_confirm_delete_all, null, false);
+
+        final PopupWindow popupWindow = new PopupWindow(
+                popupView,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                true
+        );
+
+        // Làm tối nền
+        dimOverlay.setVisibility(View.VISIBLE);
+        popupWindow.setOnDismissListener(() -> dimOverlay.setVisibility(View.GONE));
+
+        popupWindow.showAtLocation(btnClear, Gravity.CENTER, 0, 0);
+
+        TextView btnYes = popupView.findViewById(R.id.btnYes);
+        TextView btnNo = popupView.findViewById(R.id.btnNo);
+
+        btnYes.setOnClickListener(view -> {
+            deleteAllAccounts();
+            popupWindow.dismiss();
+        });
+
+        btnNo.setOnClickListener(view -> popupWindow.dismiss());
+    }
+
+    private void deleteAllAccounts() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user == null) return;
+        FirebaseFirestore.getInstance()
+                .collection("userData")
+                .document(user.getUid())
+                .update("account", new ArrayList<Map<String, Object>>())
+                .addOnSuccessListener(aVoid -> {
+                    Toast.makeText(this, "Đã xóa tất cả tài khoản!", Toast.LENGTH_SHORT).show();
+                    allAccounts.clear();
+                    linearAccounts.removeAllViews();
+                })
+                .addOnFailureListener(e ->
+                        Toast.makeText(this, "Lỗi xóa: " + e.getMessage(), Toast.LENGTH_SHORT).show()
+                );
     }
 }

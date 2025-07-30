@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#22646A">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quên mật khẩu"
+        android:textSize="26sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="60dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Nhập email đăng ký"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/bg_search_rounded"
+        android:padding="12dp"
+        android:textColor="#22646A"
+        android:textColorHint="#999999"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Gửi email đặt lại mật khẩu"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edtEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/tvBackLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quay về đăng nhập"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

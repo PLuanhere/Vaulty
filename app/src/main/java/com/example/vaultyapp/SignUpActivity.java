@@ -181,6 +181,7 @@ public class SignUpActivity extends AppCompatActivity {
                             user.sendEmailVerification()
                                     .addOnCompleteListener(task1 -> {
                                         if (task1.isSuccessful()) {
+                                            mAuth.signOut(); // <-- Đăng xuất ngay sau khi gửi email xác thực!
                                             showCheckEmailDialog();
                                         } else {
                                             Toast.makeText(SignUpActivity.this, "Lỗi gửi email xác minh: " + task1.getException().getMessage(), Toast.LENGTH_LONG).show();
