@@ -35,8 +35,10 @@ public class NewPasswordActivity extends AppCompatActivity {
         tvCancle = findViewById(R.id.tvCancle);
 
         tvSave.setOnClickListener(v -> saveAccount());
-        tvCancle.setOnClickListener(v -> finish());
-        findViewById(R.id.back).setOnClickListener(v -> finish());
+        tvCancle.setOnClickListener(v -> {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void saveAccount() {

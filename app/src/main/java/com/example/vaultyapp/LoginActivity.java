@@ -38,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     private GoogleSignInClient mGoogleSignInClient;
+    private TextView tvForget;
 
     private static final int RC_SIGN_IN = 100;
 
@@ -48,6 +49,7 @@ public class LoginActivity extends AppCompatActivity {
             startMain();
             return;
         }
+
         setContentView(R.layout.login_page);
 
         mAuth = FirebaseAuth.getInstance();
@@ -86,6 +88,8 @@ public class LoginActivity extends AppCompatActivity {
             return false;
         });
 
+
+
         buttonLog.setOnClickListener(v -> loginUser());
 
         tvSign.setOnClickListener(v -> {
@@ -103,10 +107,15 @@ public class LoginActivity extends AppCompatActivity {
         fbBtn = findViewById(R.id.btnFacebook);
         googleBtn = findViewById(R.id.btnGoogle);
         appleBtn = findViewById(R.id.btnApple);
+        tvForget = findViewById(R.id.tvForget);
 
         googleBtn.setOnClickListener(v -> signInWithGoogle());
         fbBtn.setOnClickListener(v -> Toast.makeText(this, "Đang phát triển!", Toast.LENGTH_SHORT).show());
         appleBtn.setOnClickListener(v -> Toast.makeText(this, "Đang phát triển!", Toast.LENGTH_SHORT).show());
+        tvForget.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, ForgetActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void loginUser() {
